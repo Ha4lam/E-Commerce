@@ -1,0 +1,173 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-main {
+  background-color: #dc3545;
+}
+
+header {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.cart-icon {
+  cursor: pointer;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.cart-icon:hover {
+  color: #ff4d4d;
+}
+
+.cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.categories-panel h2 {
+  font-size: 1.25rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.categories-panel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.categories-panel li {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+.categories-panel li:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.card {
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.cart-item .remove-item {
+  cursor: pointer;
+  color: #ff4d4d;
+  margin-left: 10px;
+}
+
+.cart-item .quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item .quantity-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0 5px;
+}
+
+.close-cart {
+  cursor: pointer;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #b02a37;
+}
+
+.cart-header {
+  background-color: #dc3545;
+}
+
+.cart-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.cart-body {
+  max-height: calc(100% - 56px);
+  overflow-y: auto;
+}
+
+.cart-item-thumbnail {
+  width: 50px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* Loading panel styles */
+#loadingPanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  display: none;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-top: 8px solid #dc3545;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spinner 1.5s linear infinite;
+}
